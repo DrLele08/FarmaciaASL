@@ -32,3 +32,18 @@
         }
         return null;
     }
+    //Funzione Che Restituisce Lista Farmacie
+    function getInfoFarmacie()
+    {
+        $Query="SELECT * FROM SediFarmacie";
+        $Ris=doQuery($Query);
+        $Vett=array();
+        if($Ris)
+        {
+            while($row=mysqli_fetch_array($Ris))
+            {
+                array_push($Vett,$row);
+            }
+            return $Ris;
+        }
+    }
