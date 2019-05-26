@@ -16,12 +16,12 @@
   <h3 align="center">Sito Farmacia IncoPharma</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Prototipo sito farmacia con gestione prenotazioni!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="saisraffaele.net/FarmaciaASL">Provalo</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
@@ -43,7 +43,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Creatori Sito](#Creatori Sito)
 
 
 
@@ -135,7 +135,7 @@ Open Source
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@DrLele08](https://twitter.com/DrLele08) - saisraffaele08@gmail.com
+Sais Raffaele - [@DrLele08](https://twitter.com/DrLele08) - saisraffaele08@gmail.com
 
 
 
