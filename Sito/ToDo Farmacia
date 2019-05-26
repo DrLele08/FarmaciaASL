@@ -11,3 +11,12 @@
     (
         //TODO Add TokenPassword Per 'PasswordDimenticata.php'
     )
+    Login
+    (
+        //TODO Se Dati Errati Mandare Messaggio Di Errore
+    )
+    Creazione Pagine
+    (
+        //TODO Fare Pagina Registrazione
+        //TODO Fare Pagina Password Dimenticata
+    )
