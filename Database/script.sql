@@ -18,7 +18,9 @@ CREATE TABLE Utenti
   Cognome VARCHAR(30) NOT NULL,
   Email VARCHAR(50) NOT NULL UNIQUE ,
   Password VARCHAR(255) NOT NULL,
+  isAdmin BOOLEAN NOT NULL DEFAULT 0,
   ksFarmaciaPreferita INT NOT NULL,
+  TokenPass VARCHAR(255),
   PRIMARY KEY (CF),
   FOREIGN KEY (ksFarmaciaPreferita) REFERENCES SediFarmacie(idSede)
 );

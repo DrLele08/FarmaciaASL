@@ -2,21 +2,26 @@
     Tutto
     (
         //TODO Aggiungere Persona In Menu Alto Dx
+        //TODO Creare Favicon IncoPharma
     )
     ListaFarmacie
     (
         //TODO Mettere Foto Per Ogni Farmacia
     )
-    Database
-    (
-        //TODO Add TokenPassword Per 'PasswordDimenticata.php'
-    )
     Login
     (
         //TODO Se Dati Errati Mandare Messaggio Di Errore
+        //TODO Effettuare Logout
     )
     Creazione Pagine
     (
         //TODO Fare Pagina Registrazione
-        //TODO Fare Pagina Password Dimenticata
+        //TODO Fare Pagina AreaUtente Per 'Dati Personali'
+        //TODO Fare Pagina Area Utente Per 'Gestione Prenotazioni'
+        //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
+    )
+    PasswordDimenticata
+    (
+        //TODO Script Php
+        //TODO Settare Nuova Pass Con TokenPass
     )
