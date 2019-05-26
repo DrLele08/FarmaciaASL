@@ -2,11 +2,18 @@
     session_start();
     require_once 'script/funzioni.php';
     $Farmacia=null;
+    $isLoggato=false;
+    $Utente=null;
     if(isset($_GET["idFarmacia"]))
     {
         $id=$_GET["idFarmacia"];
         $_SESSION["idFarmacia"]=$id;
         $Farmacia=getInfoFarmaciabyId($id);
+        if(isset($_SESSION["idUt"]))
+        {
+            $isLoggato=true;
+            $Utente=getInfoUtentebyId($_SESSION["idUt"]);
+        }
     }
     else
     {
@@ -32,6 +39,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stile.css">
   </head>
   <body>
     
@@ -50,7 +58,26 @@
           <li class="nav-item"><a href="doctor.html" class="nav-link">Doctors</a></li>
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal" data-target="#modalAppointment"><span>Make an Appointment</span></a></li>
+            <?php
+                if(!$isLoggato)
+                {
+                    echo "<li class=\"nav-item cta\"><a href=\"contact.html\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#login-modal\"><span>Accedi</span></a></li>";
+                }
+                else
+                {
+                    echo "<li class=\"nav-item cta\" style='padding: 7px'>
+                            <div class=\"btn-group\">
+                                <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">
+                                    {$Utente["Cognome"]} {$Utente["Nome"]}
+                                </button>
+                                <div class=\"dropdown-menu\">
+                                    <a class=\"dropdown-item\" href=\"#\">Area Utente</a>
+                                    <a class=\"dropdown-item\" href=\"#\">Esci</a>
+                                </div>
+                            </div>
+                            </li>";
+                }
+            ?>
         </ul>
       </div>
     </div>
@@ -590,53 +617,31 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
   <!-- Modal -->
-    <div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalAppointmentLabel">Appointment</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="#">
-              <div class="form-group">
-                <label for="appointment_name" class="text-black">Full Name</label>
-                <input type="text" class="form-control" id="appointment_name">
-              </div>
-              <div class="form-group">
-                <label for="appointment_email" class="text-black">Email</label>
-                <input type="text" class="form-control" id="appointment_email">
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="appointment_date" class="text-black">Date</label>
-                    <input type="text" class="form-control" id="appointment_date">
-                  </div>    
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="appointment_time" class="text-black">Time</label>
-                    <input type="text" class="form-control" id="appointment_time">
-                  </div>
-                </div>
-              </div>
-              
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
 
-              <div class="form-group">
-                <label for="appointment_message" class="text-black">Message</label>
-                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary">
-              </div>
-            </form>
-          </div>
-          
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <h1>IncoPharma</h1>
+                </div>
+
+                <!-- Login Form -->
+                <form action="script/Login.php" method="POST">
+                    <input type="text" id="text_login" class="fadeIn second" name="Email" placeholder="Email">
+                    <input type="password" id="text_password" class="fadeIn third" name="Pass" placeholder="Password">
+                    <br>
+                    <input type="submit" name="submit" class="fadeIn fourth" value="Accedi">
+                </form>
+
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+                    <a class="underlineHover" href="Registrazione.php">Registrati</a><br> oppure<br> <a class="underlineHover" href="PasswordDimenticata.php">Password Dimenticata?</a>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -652,7 +657,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   </body>

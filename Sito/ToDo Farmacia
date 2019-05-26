@@ -7,3 +7,7 @@
     (
         //TODO Mettere Foto Per Ogni Farmacia
     )
+    Database
+    (
+        //TODO Add TokenPassword Per 'PasswordDimenticata.php'
+    )

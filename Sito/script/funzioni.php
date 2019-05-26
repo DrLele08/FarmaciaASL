@@ -6,6 +6,11 @@
         $Ris=mysqli_query($Db,$Query);
         return $Ris;
     }
+    function noInjection($Stringa)
+    {
+        global $Db;
+        return mysqli_real_escape_string($Db,$Stringa);
+    }
     //Funzione Che Restituisce Informazione Di Una Farmacia Dato Un Id
     function getInfoFarmaciabyId($id)
     {
@@ -46,4 +51,19 @@
             }
             return $Ris;
         }
+        return null;
+    }
+    //Funzione Che Restituisce Vettore Utente
+    function getInfoUtentebyId($idUt)
+    {
+        $Query="SELECT * FROM Utenti WHERE CF='{$idUt}'";
+        $Ris=doQuery($Query);
+        if($Ris)
+        {
+            while($row=mysqli_fetch_array($Ris))
+            {
+                return $row;
+            }
+        }
+        return null;
     }
