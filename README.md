@@ -42,8 +42,8 @@
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
-* [Contact](#contact)
-* [Creatori Sito](#Creatori Sito)
+* [Contattaci](#contattaci)
+* [Creatori Sito](#creatori-sito)
 
 
 
@@ -133,7 +133,7 @@ Open Source
 
 
 <!-- CONTACT -->
-## Contact
+## Contattaci
 
 Sais Raffaele - [@DrLele08](https://twitter.com/DrLele08) - saisraffaele08@gmail.com
 
