@@ -61,7 +61,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-### Built With
+### Realizzato Con
 Questo sito è stato realizzato con i seguenti linguaggi/framework/librerie.
 * [HTML](https://www.w3.org/html/)
 * [Php](https://php.net/)
@@ -126,7 +126,7 @@ Contributions are what make the open source community such an amazing place to b
 
 
 <!-- LICENSE -->
-## License
+## Licenza
 
 Open Source
 
