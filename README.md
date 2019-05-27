@@ -18,14 +18,12 @@
   <p align="center">
     Prototipo sito farmacia con gestione prenotazioni!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://www.saisraffaele.net/FarmaciaASL">Provalo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://www.saisraffaele.net/FarmaciaASL/Contattaci.php">Segnala Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://www.saisraffaele.net/FarmaciaASL/Contattaci.php">Richiedi Una Feature</a>
   </p>
 </p>
 
@@ -34,14 +32,14 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
+* [Informazioni Sul Progetto](#about-the-project)
+  * [Realizzato Con](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
-* [License](#license)
+* [Licenza](#license)
 * [Contattaci](#contattaci)
 * [Creatori Sito](#creatori-sito)
 
@@ -64,10 +62,12 @@ Of course, no one template will serve all projects since your needs may be diffe
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Questo sito è stato realizzato con i seguenti linguaggi/framework/librerie.
+* [HTML](https://www.w3.org/html/)
+* [Php](https://php.net/)
+* [JavaScript](https://www.javascript.com/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
 
 
 
