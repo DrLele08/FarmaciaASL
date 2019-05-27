@@ -23,7 +23,19 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+  <?php
+      if(isset($_GET["Esci"]))
+      {
+          $Esci=$_GET["Esci"];
+          if($Esci==1)
+          {
+              $_SESSION["idUt"]=null;
+              echo "<div class=\"alert alert-success\">
+                     <strong>Fatto!</strong> Sei uscito correttamente!.
+                     </div>";
+          }
+      }
+  ?>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.php"><i class="flaticon-pharmacy"></i><span>Inco</span>Pharma</a>
@@ -58,10 +70,11 @@
                         $Nome=$Tmp["Nome"];
                         $Indirizzo=$Tmp["Indirizzo"];
                         $Citta=$Tmp["Citta"];
+                        $Foto=$Tmp["FotoPrincipale"];
                         $Html=<<<String
                         <div class="col-lg-6 d-flex ftco-animate">
     				        <div class="dept d-md-flex">
-    					        <a href="index.php?idFarmacia={$idSede}" class="img" style="background-image: url(images/dept-1.jpg);"></a>
+    					        <a href="index.php?idFarmacia={$idSede}" class="img" style="background-image: url({$Foto});"></a>
     					            <div class="text p-4">
                                         <h3><a href="index.php?idFarmacia={$idSede}">{$Nome}</a></h3>
                                         <p><span class="loc">{$Indirizzo}</span></p>

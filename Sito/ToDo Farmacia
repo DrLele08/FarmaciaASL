@@ -1,17 +1,11 @@
 +++ToDo Farmacia+++
-    Tutto
-    (
-        //TODO Aggiungere Persona In Menu Alto Dx
-        //TODO Creare Favicon IncoPharma
-    )
-    ListaFarmacie
-    (
-        //TODO Mettere Foto Per Ogni Farmacia
-    )
     Login
     (
         //TODO Se Dati Errati Mandare Messaggio Di Errore
-        //TODO Effettuare Logout
+    )
+    NavBar
+    (
+        //TODO Se Utente Admin Aggiungere 'Area Admin'
     )
     Creazione Pagine
     (
@@ -24,4 +18,13 @@
     (
         //TODO Script Php
         //TODO Settare Nuova Pass Con TokenPass
+    )
+    Database
+    (
+        //TODO Aggiungere Foto Principale In 'SediFarmacie'
+        //TODO Aggiungere Foto Di Una Farmacia
+    )
+    Contattaci
+    (
+        //TODO Fare Script Contattaci
     )

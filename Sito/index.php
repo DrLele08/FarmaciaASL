@@ -63,6 +63,20 @@
                 {
                     echo "<li class=\"nav-item cta\"><a href=\"contact.html\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#login-modal\"><span>Accedi</span></a></li>";
                 }
+                else if(!$Utente["isAdmin"])
+                {
+                    echo "<li class=\"nav-item cta\" style='padding: 7px'>
+                            <div class=\"btn-group\">
+                                <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">
+                                    {$Utente["Cognome"]} {$Utente["Nome"]}
+                                </button>
+                                <div class=\"dropdown-menu\">
+                                    <a class=\"dropdown-item\" href=\"#\">Area Utente</a>                                   
+                                    <a class=\"dropdown-item\" href=\"ListaFarmacie.php?Esci=1\">Esci</a>
+                                </div>
+                            </div>
+                            </li>";
+                }
                 else
                 {
                     echo "<li class=\"nav-item cta\" style='padding: 7px'>
@@ -71,8 +85,9 @@
                                     {$Utente["Cognome"]} {$Utente["Nome"]}
                                 </button>
                                 <div class=\"dropdown-menu\">
-                                    <a class=\"dropdown-item\" href=\"#\">Area Utente</a>
-                                    <a class=\"dropdown-item\" href=\"#\">Esci</a>
+                                    <a class=\"dropdown-item\" href=\"AreaPrivata/AreaUtente.php\">Area Utente</a> 
+                                    <a class=\"dropdown-item\" href=\"AreaPrivata/AreaAdmin.php\">Area Admin</a>                                   
+                                    <a class=\"dropdown-item\" href=\"ListaFarmacie.php?Esci=1\">Esci</a>
                                 </div>
                             </div>
                             </li>";
@@ -516,29 +531,6 @@
                 </div>
                 <h3 class="heading mt-3"><a href="#">New technology facilities</a></h3>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-		
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Iscriviti alla nostra newsletter</h2>
-              <p>Iscrivi per ricevere notizie sugli sconti e tanto altro...</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Inserisci l'indirizzo email">
-                      <input type="submit" value="Iscriviti" class="submit px-3">
-                    </div>
-                  </form>
-                </div>
               </div>
             </div>
           </div>

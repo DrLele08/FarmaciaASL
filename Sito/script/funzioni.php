@@ -27,6 +27,7 @@
                 $obj->Email=$row["Email"];
                 $obj->Pec=$row["PEC"];
                 $obj->Citta=$row["Citta"];
+                $obj->FotoPrincipale=$row["FotoPrincipale"];
             }
             return $obj;
         }
@@ -40,7 +41,7 @@
     //Funzione Che Restituisce Lista Farmacie
     function getInfoFarmacie()
     {
-        $Query="SELECT * FROM SediFarmacie";
+        $Query="SELECT * FROM SediFarmacie ORDER BY SediFarmacie.Nome";
         $Ris=doQuery($Query);
         $Vett=array();
         if($Ris)
