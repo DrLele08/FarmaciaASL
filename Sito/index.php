@@ -57,7 +57,7 @@
           <li class="nav-item"><a href="ListaFarmacie.php" class="nav-link">Lista Farmacie</a></li>
           <li class="nav-item"><a href="doctor.html" class="nav-link">Doctors</a></li>
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="Contattaci.php" class="nav-link">Contattaci</a></li>
             <?php
                 if(!$isLoggato)
                 {
@@ -71,7 +71,7 @@
                                     {$Utente["Cognome"]} {$Utente["Nome"]}
                                 </button>
                                 <div class=\"dropdown-menu\">
-                                    <a class=\"dropdown-item\" href=\"#\">Area Utente</a>                                   
+                                    <a class=\"dropdown-item\" href=\"Dashboard/AreaUtente.php\">Area Utente</a>                                   
                                     <a class=\"dropdown-item\" href=\"ListaFarmacie.php?Esci=1\">Esci</a>
                                 </div>
                             </div>
@@ -85,8 +85,8 @@
                                     {$Utente["Cognome"]} {$Utente["Nome"]}
                                 </button>
                                 <div class=\"dropdown-menu\">
-                                    <a class=\"dropdown-item\" href=\"AreaPrivata/AreaUtente.php\">Area Utente</a> 
-                                    <a class=\"dropdown-item\" href=\"AreaPrivata/AreaAdmin.php\">Area Admin</a>                                   
+                                    <a class=\"dropdown-item\" href=\"Dashboard/AreaUtente.php\">Area Utente</a> 
+                                    <a class=\"dropdown-item\" href=\"Dashboard/AreaAdmin.php\">Area Admin</a>                                   
                                     <a class=\"dropdown-item\" href=\"ListaFarmacie.php?Esci=1\">Esci</a>
                                 </div>
                             </div>

@@ -3,28 +3,20 @@
     (
         //TODO Se Dati Errati Mandare Messaggio Di Errore
     )
-    NavBar
-    (
-        //TODO Se Utente Admin Aggiungere 'Area Admin'
-    )
     Creazione Pagine
     (
-        //TODO Fare Pagina Registrazione
-        //TODO Fare Pagina AreaUtente Per 'Dati Personali'
+        //TODO Pagina Statica 'Contattaci.php'
         //TODO Fare Pagina Area Utente Per 'Gestione Prenotazioni'
         //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
-    )
-    PasswordDimenticata
-    (
-        //TODO Script Php
-        //TODO Settare Nuova Pass Con TokenPass
+        //TODO Fare Pagina Area Utente Per Vedere Dati Personali
     )
     Database
     (
-        //TODO Aggiungere Foto Principale In 'SediFarmacie'
-        //TODO Aggiungere Foto Di Una Farmacia
+        //TODO Gestire Prenotazioni
+        //TODO Aggiungere FotoProfilo Utente
     )
-    Contattaci
+    GitHub
     (
-        //TODO Fare Script Contattaci
+        //TODO Finire ReadMe
+        //TODO Ringraziare Classe 5Ei Per Il Database
     )
