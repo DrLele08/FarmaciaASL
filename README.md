@@ -38,7 +38,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#contributing)
+* [Contributi](#contributi)
 * [Licenza](#license)
 * [Contattaci](#contattaci)
 * [Creatori Sito](#creatori-sito)
@@ -118,10 +118,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 Persone che hanno contribuito alla realizzazione del progetto:
 * [Peluso Mario]: Inserimento Sedi Farmacie In DB
 * [Abbate Raymond]: Inserimento Foto In DB
-* [Cimafonte Luca]: Creazione DB 'Servizio'
+* [Cimafonte Luca]: Creazione DB Servizio
 * [Pocchia Gabriele]: Fixato Bug Login
-* [Demuro Matteo]: Tester
-
+* [Demuro Matteo]: Tester 
 
 
 <!-- LICENSE -->
