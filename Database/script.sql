@@ -19,6 +19,7 @@ CREATE TABLE Utenti
   Cognome VARCHAR(30) NOT NULL,
   Email VARCHAR(50) NOT NULL UNIQUE ,
   Password VARCHAR(255) NOT NULL,
+  FotoProfilo VARCHAR(255) NOT NULL DEFAULT 'img/Utenti/default.png',
   isAdmin BOOLEAN NOT NULL DEFAULT 0,
   ksFarmaciaPreferita INT NOT NULL,
   TokenPass VARCHAR(255),
@@ -34,11 +35,11 @@ CREATE TABLE Servizi
   PRIMARY KEY(idServizio)
 );
 -- Inserisco Sedi Farmacie
-INSERT INTO SediFarmacie(Nome,Indirizzo,Telefono,Email,PEC,Citta) 
-VALUES("Farmacia Comunale di Crispano","Via Provinciale Fratta Crispano, 69","0818348070","farcomcrispano@libero.it","farcomacrispano@pec.it","Crispano(NA)");
+INSERT INTO SediFarmacie(Nome,Indirizzo,Telefono,Email,PEC,Citta,FotoPrincipale)
+VALUES("Farmacia Comunale di Crispano","Via Provinciale Fratta Crispano, 69","0818348070","farcomcrispano@libero.it","farcomacrispano@pec.it","Crispano(NA)","img/FotoProfilo/Crispano.jpg");
 -- Inserimento Utente
-INSERT INTO Utenti(CF, Nome, Cognome, Email, Password, ksFarmaciaPreferita)
-VALUES ("SSARFL00L30F839Z","Raffaele","Sais","saisraffaele08@gmail.com","$2y$10$3SaQWzHBekVKB6pwCxN.U.QfUoB.xWFddfgdha4KICfyEeEqLvpzC",1);
+INSERT INTO Utenti(CF, Nome, Cognome, Email, Password, ksFarmaciaPreferita,isAdmin)
+VALUES ("SSARFL00L30F839Z","Raffaele","Sais","saisraffaele08@gmail.com","$2y$10$3SaQWzHBekVKB6pwCxN.U.QfUoB.xWFddfgdha4KICfyEeEqLvpzC",1,1);
 -- Inserimento Servizio
 INSERT INTO Servizi(Tipo, Descrizione)
 VALUES ("Test per le intolleranze alimentari","Quello delle intolleranze alimentari è un fenomeno sempre più diffuso e caratterizzato da una sintomatologia molto varia, più o meno sfumata.");

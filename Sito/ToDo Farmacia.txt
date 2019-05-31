@@ -5,7 +5,6 @@
     )
     Creazione Pagine
     (
-        //TODO Pagina Statica 'Contattaci.php'
         //TODO Fare Pagina Area Utente Per 'Gestione Prenotazioni'
         //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
         //TODO Fare Pagina Area Utente Per Vedere Dati Personali
@@ -13,10 +12,12 @@
     Database
     (
         //TODO Gestire Prenotazioni
-        //TODO Aggiungere FotoProfilo Utente
     )
     GitHub
     (
         //TODO Finire ReadMe
-        //TODO Ringraziare Classe 5Ei Per Il Database
+    )
+    Dashboard
+    (
+        //TODO Controllare Se Si Hanno I Permessi Atrimenti Mandare Mess Errore
     )

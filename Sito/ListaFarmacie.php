@@ -35,13 +35,31 @@
                      </div>";
           }
       }
+      if(isset($_GET["Err"]))
+      {
+          $Err=$_GET["Err"];
+          switch($Err)
+          {
+              case '1':
+                  {
+                      echo "<div class=\"alert alert-danger\">
+                     <strong>Errore!</strong> Dati errati!.
+                     </div>";
+                      break;
+                  }
+              case '2':
+                  {
+                      echo "<div class=\"alert alert-danger\">
+                     <strong>Errore!</strong> Non hai i permessi!.
+                     </div>";
+                      break;
+                  }
+          }
+      }
   ?>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.php"><i class="flaticon-pharmacy"></i><span>Inco</span>Pharma</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
+      <a class="navbar-brand" href="index.php"><i class="flaticon-pharmacy"></i><span>Inco</span>Farma</a>
     </div>
   </nav>
     <!-- END nav -->
