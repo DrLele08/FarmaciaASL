@@ -9,6 +9,10 @@
         $Ris=doQuery($Query);
         if($Ris)
         {
+            if(mysqli_num_rows($Ris)==0)
+            {
+                header("Location: ../ListaFarmacie.php?Err=1");
+            }
             while($row=mysqli_fetch_array($Ris))
             {
                 $PassDb=$row["Password"];
