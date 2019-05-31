@@ -9,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://saisraffaele.net/FarmaciaASL/ListaFarmacie.php">
     <img src="http://www.incofarma.it/images/logo_inco.gif" alt="Logo" width="450" height="130">
   </a>
 
