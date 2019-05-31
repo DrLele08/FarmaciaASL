@@ -1,8 +1,4 @@
 +++ToDo Farmacia+++
-    Login
-    (
-        //TODO Se Dati Errati Mandare Messaggio Di Errore
-    )
     Creazione Pagine
     (
         //TODO Fare Pagina Area Utente Per 'Gestione Prenotazioni'
@@ -12,12 +8,27 @@
     Database
     (
         //TODO Gestire Prenotazioni
+        //TODO Aggiungere I Vari Servizi
+        //TODO Aggiungere 2-3 Utenti
     )
     GitHub
     (
         //TODO Finire ReadMe
     )
-    Dashboard
+    AreaAdmin
     (
-        //TODO Controllare Se Si Hanno I Permessi Atrimenti Mandare Mess Errore
+        //TODO Controllo Permessi
+        //TODO Dinamicità
+    )
+    AreaUtente
+    (
+        //TODO Dinamicità
+    )
+    Esame
+    (
+        //TODO Esempio SQL Injection
+    )
+    Pagina Farmacia
+    (
+        //TODO Gestire Servizi Offerti(Visualizzarli Solo)
     )

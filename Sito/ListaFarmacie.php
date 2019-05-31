@@ -50,7 +50,7 @@
               case '2':
                   {
                       echo "<div class=\"alert alert-danger\">
-                     <strong>Errore!</strong> Non hai i permessi!.
+                     <strong>Errore!</strong> Non hai i permessi, Effettua il login!
                      </div>";
                       break;
                   }
@@ -96,11 +96,11 @@
                                         <h3><a href="index.php?idFarmacia={$idSede}">{$Nome}</a></h3>
                                         <p><span class="loc">{$Indirizzo}</span></p>
                                         <p><span class="doc">{$Citta}</span></p>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                                        <p>L’ Inco.Farma, si muove nel campo dei servizi qualificati alla persona attraverso una rete di multiservizi per bisogni sanitari, assistenziali e di sicurezza, in modo da garantire la presa in carico del cittadino e della famiglia.</p>
                                         <ul>
-                                            <li><span class="ion-ios-checkmark"></span>Emergency</li>
-                                            <li><span class="ion-ios-checkmark"></span>Laboratory</li>
-                                            <li><span class="ion-ios-checkmark"></span>Dental</li>
+                                            <li><span class="ion-ios-checkmark"></span>Prenota Visite</li>
+                                            <li><span class="ion-ios-checkmark"></span>Acquista Prodotti</li>
+                                            <li><span class="ion-ios-checkmark"></span>Misura Il Tuo Peso</li>
                                         </ul>
     					            </div>
     				        </div>
@@ -122,34 +122,9 @@ String;
               <h2 class="ftco-heading-2">IncoPharma</h2>
               <p>L’ Inco.Farma, si muove nel campo dei servizi qualificati alla persona attraverso una rete di multiservizi per bisogni sanitari, assistenziali e di sicurezza, in modo da garantire la presa in carico del cittadino e della famiglia.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Information</h2>
-              <ul class="list-unstyled">
-              	<li><a href="#" class="py-2 d-block">Appointments</a></li>
-                <li><a href="#" class="py-2 d-block">Our Specialties</a></li>
-                <li><a href="#" class="py-2 d-block">Why Choose us</a></li>
-                <li><a href="#" class="py-2 d-block">Our Services</a></li>
-                <li><a href="#" class="py-2 d-block">health Tips</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Site Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Home</a></li>
-                <li><a href="#" class="py-2 d-block">About</a></li>
-                <li><a href="#" class="py-2 d-block">Departments</a></li>
-                <li><a href="#" class="py-2 d-block">Doctors</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="#" class="py-2 d-block">Contact</a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/DrLele08"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/raffaele.sais.3"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/drlele08/"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -235,8 +210,6 @@ String;
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
   </body>

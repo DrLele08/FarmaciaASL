@@ -12,7 +12,7 @@ CREATE TABLE SediFarmacie
   PRIMARY KEY(idSede)
 );
 -- Creo Tabella Utente Farmacia
-CREATE TABLE Utenti
+CREATE TABLE UtentiF
 (
   CF char(16) NOT NULL,
   Nome VARCHAR(30) NOT NULL,
@@ -34,11 +34,8 @@ CREATE TABLE Servizi
   Descrizione VARCHAR(250) NOT NULL,
   PRIMARY KEY(idServizio)
 );
--- Inserisco Sedi Farmacie
-INSERT INTO SediFarmacie(Nome,Indirizzo,Telefono,Email,PEC,Citta,FotoPrincipale)
-VALUES("Farmacia Comunale di Crispano","Via Provinciale Fratta Crispano, 69","0818348070","farcomcrispano@libero.it","farcomacrispano@pec.it","Crispano(NA)","img/FotoProfilo/Crispano.jpg");
 -- Inserimento Utente
-INSERT INTO Utenti(CF, Nome, Cognome, Email, Password, ksFarmaciaPreferita,isAdmin)
+INSERT INTO UtentiF(CF, Nome, Cognome, Email, Password, ksFarmaciaPreferita,isAdmin)
 VALUES ("SSARFL00L30F839Z","Raffaele","Sais","saisraffaele08@gmail.com","$2y$10$3SaQWzHBekVKB6pwCxN.U.QfUoB.xWFddfgdha4KICfyEeEqLvpzC",1,1);
 -- Inserimento Servizio
 INSERT INTO Servizi(Tipo, Descrizione)

@@ -57,7 +57,7 @@
     //Funzione Che Restituisce Vettore Utente
     function getInfoUtentebyId($idUt)
     {
-        $Query="SELECT * FROM Utenti WHERE CF='{$idUt}'";
+        $Query="SELECT * FROM UtentiF WHERE CF='{$idUt}'";
         $Ris=doQuery($Query);
         if($Ris)
         {

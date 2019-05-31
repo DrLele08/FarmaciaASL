@@ -5,7 +5,7 @@
     {
         $Email=$_POST["Email"];
         $Pass=$_POST["Pass"];
-        $Query="SELECT * FROM Utenti WHERE Email='{$Email}' LIMIT 1";
+        $Query="SELECT * FROM UtentiF WHERE Email='{$Email}' LIMIT 1";
         $Ris=doQuery($Query);
         if($Ris)
         {
