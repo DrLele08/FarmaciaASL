@@ -34,9 +34,6 @@ CREATE TABLE Servizi
   Descrizione VARCHAR(250) NOT NULL,
   PRIMARY KEY(idServizio)
 );
--- Inserimento Utente
-INSERT INTO UtentiF(CF, Nome, Cognome, Email, Password, ksFarmaciaPreferita,isAdmin)
-VALUES ("SSARFL00L30F839Z","Raffaele","Sais","saisraffaele08@gmail.com","$2y$10$3SaQWzHBekVKB6pwCxN.U.QfUoB.xWFddfgdha4KICfyEeEqLvpzC",1,1);
 -- Inserimento Servizio
 INSERT INTO Servizi(Tipo, Descrizione)
 VALUES ("Test per le intolleranze alimentari","Quello delle intolleranze alimentari è un fenomeno sempre più diffuso e caratterizzato da una sintomatologia molto varia, più o meno sfumata.");
