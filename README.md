@@ -116,11 +116,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contributi
 
 Persone che hanno contribuito alla realizzazione del progetto:
+
 * [Peluso Mario]: Inserimento Sedi Farmacie In DB
 * [Abbate Raymond]: Inserimento Foto In DB
 * [Cimafonte Luca]: Creazione DB Servizio
-* [Pocchia Gabriele]: Fixato Bug Login
-* [Demuro Matteo]: Tester 
+* [Pocchia Gabriele]: Fixato Bug Login 
 
 
 <!-- LICENSE -->
