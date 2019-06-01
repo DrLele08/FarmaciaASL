@@ -44,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Info Sul Progetto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://saisraffaele.net/FarmaciaASL)
 
 Questo sito è stato realizzato per l'ASL Con la societò farmaceutica IncoFarma SPA
 
@@ -102,4 +102,4 @@ Sais Raffaele - [@DrLele08](https://twitter.com/DrLele08) - saisraffaele08@gmail
 [license-url]: https://choosealicense.com/licenses/mit
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/raffaele-sais-746ba8174/
-[product-screenshot]: https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/screenshot.png
+[product-screenshot]: https://saisraffaele.net/FarmaciaASL/img/Screen.PNG
