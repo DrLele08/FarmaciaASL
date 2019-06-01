@@ -7,31 +7,16 @@
         //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
         //TODO Fare Pagina Area Admin Per Aggiungere Disponibilità Visite
         //TODO Fare Pagina Area Utente Per Vedere Dati Personali
-        //TODO Fare Pagina Manutenzione
     )
     Database
     (
         //TODO Gestire Prenotazioni
-        //TODO Aggiungere I Vari Servizi
-    )
-    GitHub
-    (
-        //TODO Add Foto Sito In ReadMe
     )
     AreaAdmin
     (
         //TODO Dinamicità
-        //TODO Admin Puo Accedere Anche Se Sito In Manutenzione
     )
     AreaUtente
     (
         //TODO Dinamicità
-    )
-    Esame
-    (
-        //TODO Esempio SQL Injection
-    )
-    Database
-    (
-        //TODO Aggiungere Controllo Manutenzione
     )
