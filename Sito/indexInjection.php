@@ -9,15 +9,12 @@
         $id=$_GET["idFarmacia"];
         $_SESSION["idFarmacia"]=$id;
         $Farmacia=getInfoFarmaciabyId($id);
-        if(isset($_SESSION["idUt"]))
-        {
-            $isLoggato=true;
-            $Utente=getInfoUtentebyId($_SESSION["idUt"]);
-        }
     }
     else
     {
-        header("Location: 404.html");
+        $id=1;
+        $_SESSION["idFarmacia"]=$id;
+        $Farmacia=getInfoFarmaciabyId($id);
     }
 ?>
 <!DOCTYPE html>
@@ -55,41 +52,7 @@
           <li class="nav-item active"><a href="index.php?idFarmacia=<?php echo $_GET["idFarmacia"] ?>" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="ListaFarmacie.php" class="nav-link">Lista Farmacie</a></li>
           <li class="nav-item"><a href="Contattaci.php" class="nav-link">Contattaci</a></li>
-            <?php
-                if(!$isLoggato)
-                {
-                    echo "<li class=\"nav-item cta\"><a href=\"#contact\" class=\"nav-link\" data-toggle=\"modal\" data-target=\"#login-modal\"><span>Accedi</span></a></li>";
-                }
-                else if(!$Utente["isAdmin"])
-                {
-                    echo "<li class=\"nav-item cta\" style='padding: 7px'>
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">
-                                    {$Utente["Cognome"]} {$Utente["Nome"]}
-                                </button>
-                                <div class=\"dropdown-menu\">
-                                    <a class=\"dropdown-item\" href=\"Dashboard/AreaUtente.php\">Area Utente</a>                                   
-                                    <a class=\"dropdown-item\" href=\"ListaFarmacie.php?Esci=1\">Esci</a>
-                                </div>
-                            </div>
-                            </li>";
-                }
-                else
-                {
-                    echo "<li class=\"nav-item cta\" style='padding: 7px'>
-                            <div class=\"btn-group\">
-                                <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">
-                                    {$Utente["Cognome"]} {$Utente["Nome"]}
-                                </button>
-                                <div class=\"dropdown-menu\">
-                                    <a class=\"dropdown-item\" href=\"Dashboard/AreaUtente.php\">Area Utente</a> 
-                                    <a class=\"dropdown-item\" href=\"Dashboard/AreaAdmin.php\">Area Admin</a>                                   
-                                    <a class=\"dropdown-item\" href=\"ListaFarmacie.php?Esci=1\">Esci</a>
-                                </div>
-                            </div>
-                            </li>";
-                }
-            ?>
+          <li class="nav-item cta"><a href="#contact" class="nav-link" data-toggle="modal" data-target="#login-modal"><span>Accedi</span></a></li>
         </ul>
       </div>
     </div>
@@ -284,7 +247,7 @@
                 </div>
 
                 <!-- Login Form -->
-                <form action="script/Login.php" method="POST">
+                <form action="script/LoginInjection.php" method="POST">
                     <input type="text" id="text_login" class="fadeIn second" name="Email" placeholder="Email">
                     <input type="password" id="text_password" class="fadeIn third" name="Pass" placeholder="Password">
                     <br>

@@ -79,7 +79,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="AreaUtente.php">
-                <img src="./assets/img/brand/blue.png">
+                <img src="./assets/img/brand/blue.png" alt="">
               </a>
             </div>
             <div class="col-6 collapse-close">

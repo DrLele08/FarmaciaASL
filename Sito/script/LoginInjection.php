@@ -5,9 +5,8 @@
     {
         $Email=$_POST["Email"];
         $Pass=$_POST["Pass"];
-        $Email=noInjection($Email);
-        $Pass=noInjection($Pass);
-        $Query="SELECT * FROM UtentiF WHERE Email='{$Email}' LIMIT 1";
+        $Query="SELECT * FROM UtentiF WHERE Email='{$Email}'";
+        echo $Query;
         $Ris=doQuery($Query);
         if($Ris)
         {
@@ -18,12 +17,9 @@
             while($row=mysqli_fetch_array($Ris))
             {
                 $PassDb=$row["Password"];
-                if(password_verify($Pass,$PassDb))
-                {
-                    $idFarma=$row["ksFarmaciaPreferita"];
-                    $_SESSION["idUt"]=$row["CF"];
-                    header("Location: ../index.php?idFarmacia=".$idFarma);
-                }
+                $idFarma=$row["ksFarmaciaPreferita"];
+                $_SESSION["idUt"]=$row["CF"];
+                header("Location: ../index.php?idFarmacia=".$idFarma);
             }
         }
     }

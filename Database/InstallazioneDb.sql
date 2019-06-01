@@ -17,7 +17,7 @@ CREATE TABLE UtentiF
   CF char(16) NOT NULL,
   Nome VARCHAR(30) NOT NULL,
   Cognome VARCHAR(30) NOT NULL,
-  Email VARCHAR(50) NOT NULL UNIQUE ,
+  Email VARCHAR(50) NOT NULL UNIQUE,
   Password VARCHAR(255) NOT NULL,
   FotoProfilo VARCHAR(255) NOT NULL DEFAULT 'img/Utenti/default.png',
   isAdmin BOOLEAN NOT NULL DEFAULT 0,
@@ -34,6 +34,3 @@ CREATE TABLE Servizi
   Descrizione VARCHAR(250) NOT NULL,
   PRIMARY KEY(idServizio)
 );
--- Inserimento Servizio
-INSERT INTO Servizi(Tipo, Descrizione)
-VALUES ("Test per le intolleranze alimentari","Quello delle intolleranze alimentari è un fenomeno sempre più diffuso e caratterizzato da una sintomatologia molto varia, più o meno sfumata.");

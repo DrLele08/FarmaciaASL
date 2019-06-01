@@ -1,4 +1,5 @@
 +++ToDo Farmacia+++
+
     Creazione Pagine
     (
         //TODO Fare Pagina Area Utente Per 'Gestione Prenotazioni'
@@ -6,12 +7,12 @@
         //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
         //TODO Fare Pagina Area Admin Per Aggiungere Disponibilità Visite
         //TODO Fare Pagina Area Utente Per Vedere Dati Personali
+        //TODO Fare Pagina Manutenzione
     )
     Database
     (
         //TODO Gestire Prenotazioni
         //TODO Aggiungere I Vari Servizi
-        //TODO Aggiungere 2-3 Utenti
     )
     GitHub
     (
@@ -19,8 +20,8 @@
     )
     AreaAdmin
     (
-        //TODO Controllo Permessi
         //TODO Dinamicità
+        //TODO Admin Puo Accedere Anche Se Sito In Manutenzione
     )
     AreaUtente
     (
@@ -30,7 +31,7 @@
     (
         //TODO Esempio SQL Injection
     )
-    Pagina Farmacia
+    Database
     (
-        //TODO Gestire Servizi Offerti(Visualizzarli Solo)
+        //TODO Aggiungere Controllo Manutenzione
     )
