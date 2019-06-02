@@ -14,7 +14,7 @@ CREATE TABLE SediFarmacie
 -- Creo Tabella Utente Farmacia
 CREATE TABLE UtentiF
 (
-  CF char(16) NOT NULL,
+  CF CHAR(16) NOT NULL,
   Nome VARCHAR(30) NOT NULL,
   Cognome VARCHAR(30) NOT NULL,
   Email VARCHAR(50) NOT NULL UNIQUE,
@@ -33,4 +33,21 @@ CREATE TABLE Servizi
   Tipo VARCHAR(70) NOT NULL UNIQUE,
   Descrizione VARCHAR(250) NOT NULL,
   PRIMARY KEY(idServizio)
+);
+-- Creo Tabella Per Prenotazioni
+CREATE TABLE Prenotazioni
+(
+  idPreno INT AUTO_INCREMENT NOT NULL,
+  ksServizio INT NOT NULL,
+  ksFarmacia INT NOT NULL,
+  ksMedico CHAR(16) NOT NULL,
+  ksPersona CHAR(16),
+  Data DATE NOT NULL,
+  Orario TIME NOT NULL,
+  Esito VARCHAR(255),
+  PRIMARY KEY(idPreno),
+  FOREIGN KEY (ksServizio) REFERENCES Servizi(idServizio),
+  FOREIGN KEY (ksFarmacia) REFERENCES SediFarmacie(idSede),
+  FOREIGN KEY (ksMedico) REFERENCES UtentiF(CF),
+  FOREIGN KEY(ksPersona) REFERENCES UtentiF(CF)
 );

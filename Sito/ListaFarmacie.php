@@ -31,7 +31,7 @@
           {
               $_SESSION["idUt"]=null;
               echo "<div class=\"alert alert-success\">
-                     <strong>Fatto!</strong> Sei uscito correttamente!.
+                     <strong>Fatto!</strong> Sei uscito correttamente!
                      </div>";
           }
       }
@@ -43,7 +43,7 @@
               case '1':
                   {
                       echo "<div class=\"alert alert-danger\">
-                     <strong>Errore!</strong> Dati errati!.
+                     <strong>Errore!</strong> Dati errati!
                      </div>";
                       break;
                   }

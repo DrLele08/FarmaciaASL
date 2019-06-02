@@ -6,17 +6,4 @@
         //TODO Fare Pagina Area Utente Per 'Effettuare Prenotazioni'
         //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
         //TODO Fare Pagina Area Admin Per Aggiungere Disponibilità Visite
-        //TODO Fare Pagina Area Utente Per Vedere Dati Personali
-    )
-    Database
-    (
-        //TODO Gestire Prenotazioni
-    )
-    AreaAdmin
-    (
-        //TODO Dinamicità
-    )
-    AreaUtente
-    (
-        //TODO Dinamicità
     )

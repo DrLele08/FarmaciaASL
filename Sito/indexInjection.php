@@ -249,7 +249,7 @@
                 <!-- Login Form -->
                 <form action="script/LoginInjection.php" method="POST">
                     <input type="text" id="text_login" class="fadeIn second" name="Email" placeholder="Email">
-                    <input type="password" id="text_password" class="fadeIn third" name="Pass" placeholder="Password">
+                    <input type="text" id="text_password" class="fadeIn third" name="Pass" placeholder="Password">
                     <br>
                     <input type="submit" name="submit" class="fadeIn fourth" value="Accedi">
                 </form>
