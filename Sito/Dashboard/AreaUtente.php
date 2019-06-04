@@ -207,6 +207,7 @@
     </nav>
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(./assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+
         <!-- Mask -->
         <span class="mask bg-gradient-default opacity-8"></span>
         <!-- Header container -->
@@ -220,6 +221,208 @@
         </div>
     </div>
     <!-- Page content -->
+
+    <div class="container-fluid mt--9 Invisibile" id="DivUtentePrenota">
+        <div class="row">
+            <div class="col-xl-10 order-xl-1">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Prenota La Tua Visita</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4">Compila i seguenti dati...</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="select_Farmacia">Farmacia</label>
+                                            <select class="form-control" id="select_Farmacia" data-toggle="select" title="Simple select" data-live-search="true" data-live-search-placeholder="Cerca ...">
+                                                <?php
+                                                    $Farmacie=getInfoFarmacie();
+                                                    foreach($Farmacie as $row)
+                                                    {
+                                                        $idFarma=$row["idSede"];
+                                                        $Nome=$row["Nome"];
+                                                        if($idFarma==$Ut["ksFarmaciaPreferita"])
+                                                        {
+                                                            echo "<option selected value='{$idFarma}'>{$Nome}</option>";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo "<option value='{$idFarma}'>{$Nome}</option>";
+                                                        }
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input_DataPrenotazione">Data</label>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                                    </div>
+                                                    <input class="form-control datepicker" id="input_DataPrenotazione" placeholder="Scegli una data" type="text" onchange="dataChanged()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 Invisibile" id="DivUtenteSceglieServizio">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-first-name">Servizio</label>
+                                            <select class="form-control" id="select_ServizioFarmacia" data-toggle="select" title="Simple select" data-live-search="true" data-live-search-placeholder="Cerca ..." onchange="ServizioSelected()">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 Invisibile" id="DivUtenteSceglieOrario">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-last-name">Orario</label>
+                                            <select class="form-control" id="select_OrarioServizioFarmacia" data-toggle="select" title="Simple select" data-live-search="true" data-live-search-placeholder="Cerca ..." onchange="OrarioSelected()">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div align="center" style="text-align: center;">
+                                    <div class="Invisibile" id="DivUtentePrenotaBtn">
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-success" onclick="PrenotaVisita()">Prenota</button>
+                                            <button type="button" class="btn btn-danger" onclick="Cancella(true)">Annulla</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="DivUtenteGest" class="Invisibile container-fluid mt--9">
+        <div class="row">
+            <div class="col-xl-2-10 order-xl-2">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Gestisci Prenotazioni</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-dark">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Farmacia</th>
+                                    <th scope="col">Servizio</th>
+                                    <th scope="col">Data/Ora</th>
+                                    <th scope="col">Stato</th>
+                                    <th scope="col">Medico</th>
+                                    <th scope="col">Esito</th>
+                                    <th scope="col">Altro</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                    $Vett=getPrenotazioneUtbyId($Ut["CF"]);
+                                    foreach($Vett as $row)
+                                    {
+                                        $idServizio=$row[1];
+                                        $idFarma=$row[2];
+                                        $idMedico=$row[3];
+                                        $Data=$row[5];
+                                        $Ora=$row[6];
+                                        $Esito=$row[7];
+                                        $Servizio=getServiziobyId($idServizio);
+                                        $Farmacia=getInfoFarmaciabyId($idFarma);
+                                        $Medico=getInfoUtentebyId($idMedico);
+                                        $Generalita=$Medico["Cognome"]." ".$Medico["Nome"];
+                                        $hasFinito=true;
+                                        if($Esito==null)
+                                        {
+                                            $Esito="N/D";
+                                            $hasFinito=false;
+                                        }
+                                        echo "  <tr>
+                                                <th scope=\"row\">
+                                                    <div class=\"media align-items-center\">
+                                                        <a href=\"#\" class=\"avatar rounded-circle mr-3\">
+                                                            <img alt=\"Image placeholder\" src=\"../{$Farmacia->FotoPrincipale}\">
+                                                        </a>
+                                                        <div class=\"media-body\">
+                                                            <span class=\"mb-0 text-sm\">{$Farmacia->Nome}</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    {$Servizio}
+                                                </td>
+                                                <td>
+                                                    {$Data}/{$Ora}
+                                                </td>";
+                                        if($hasFinito)
+                                        {
+                                            echo "
+                                                <td>
+                                                    <span class=\"badge badge-dot mr-4\">
+                                                      <i class=\"bg-success\"></i> Finito
+                                                    </span>
+                                                </td>";
+                                        }
+                                        else
+                                        {
+                                            echo "
+                                                <td>
+                                                    <span class=\"badge badge-dot mr-4\">
+                                                      <i class=\"bg-orange\"></i> In Corso...
+                                                    </span>
+                                                </td>";
+                                        }
+                                        echo "
+                                                <td>
+                                                    <div class=\"avatar-group\">
+                                                        <a href=\"#\" class=\"avatar avatar-sm\" data-toggle=\"tooltip\" data-original-title=\"{$Generalita}\">
+                                                            <img alt=\"Image placeholder\" src=\"../img/Utenti/default.png\" class=\"rounded-circle\">
+                                                        </a>
+                                                    </div>
+            
+                                                </td>
+                                                <td>
+                                                    <div class=\"d-flex align-items-center\">
+                                                        {$Esito}
+                                                    </div>
+                                                </td>
+                                                <td class=\"text-right\">
+                                                    <div class=\"dropdown\">
+                                                        <a class=\"btn btn-sm btn-icon-only text-light\" href=\"#\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                                            <i class=\"fas fa-ellipsis-v\"></i>
+                                                        </a>
+                                                        <div class=\"dropdown-menu dropdown-menu-right dropdown-menu-arrow\">
+                                                            <a class=\"dropdown-item\" href=\"#\" onclick='EliminaPreno();'>Elimina</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>";
+                                    }
+                                ?>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid mt--9 Invisibile" id="DivUtenteProfilo">
         <div class="row">
             <div class="col-xl-10 order-xl-1">
@@ -303,6 +506,37 @@
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="modal fade" id="modal-prenodone" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+                <div class="modal-content bg-gradient-danger">
+
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="modal-title-notification">Prenotazione Effettuata</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="py-3 text-center">
+                            <i class="ni ni-bell-55 ni-3x"></i>
+                            <h4 class="heading mt-4">Hai effettuato la prenotazione!</h4>
+                            <p>Ti aspettiamo in farmacia!</p>
+                            <p>Ti è stata inviata una mail di riepilogo</p>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Chiudi</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="row align-items-center justify-content-xl-between">
@@ -325,9 +559,10 @@
 <!-- Core -->
 <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Argon JS -->
 <script src="./assets/js/argon.min.js?v=1.0.0"></script>
-<script src="./assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../javascript/funzioni.js"></script>
 <script>
     var DivAttivo="DivAdminDispPreno";
     function CambiaDiv(NewDiv)
@@ -335,6 +570,85 @@
         $("#"+DivAttivo).addClass("Invisibile");
         DivAttivo=NewDiv;
         $('#'+NewDiv).removeClass("Invisibile");
+    }
+    function EliminaPreno()
+    {
+        alert("Al momento non disponibile!");
+    }
+    function dataChanged()
+    {
+        let Data=$("#input_DataPrenotazione").val();
+        let DataOggi="<?php echo date('m/d/Y') ?>";
+        let idFarmacia=$("#select_Farmacia").val();
+        if(Data<DataOggi)
+        {
+            alert("Selezionare un giorno prossimo!");
+        }
+        else
+        {
+            let NewData=Data[6]+Data[7]+Data[8]+Data[9]+"-"+Data[0]+Data[1]+"-"+Data[3]+Data[4];
+            getServiziByFarmaciaAndData(idFarmacia,NewData);
+        }
+    }
+    function ServizioSelected()
+    {
+        let select=$("#select_ServizioFarmacia");
+        let idServizio=select.val();
+        if(idServizio!='-1')
+        {
+            let selectOrari=$("#select_OrarioServizioFarmacia");
+            getInfoOrari(selectOrari,idServizio);
+        }
+        else if(!$("#DivUtenteSceglieOrario").hasClass("Invisibile"))
+        {
+            $("#DivUtenteSceglieOrario").addClass("Invisibile");
+        }
+    }
+    function OrarioSelected()
+    {
+        let selectOra=$("#select_OrarioServizioFarmacia");
+        if(selectOra.val()!='-1')
+        {
+            $("#DivUtentePrenotaBtn").removeClass("Invisibile");
+        }
+        else if(!$("#DivUtentePrenotaBtn").hasClass("Invisibile"))
+        {
+            $("#DivUtentePrenotaBtn").addClass("Invisibile")
+        }
+    }
+    function Cancella(chiedi)
+    {
+        if(!chiedi)
+        {
+            $("#DivUtentePrenotaBtn").addClass("Invisibile");
+            $("#DivUtenteSceglieOrario").addClass("Invisibile");
+            $("#DivUtenteSceglieServizio").addClass("Invisibile");
+            $("#input_DataPrenotazione").val("");
+        }
+        else
+        {
+            if(confirm("Sicuro di voler annullare?"))
+            {
+                $("#DivUtentePrenotaBtn").addClass("Invisibile");
+                $("#DivUtenteSceglieOrario").addClass("Invisibile");
+                $("#DivUtenteSceglieServizio").addClass("Invisibile");
+                $("#input_DataPrenotazione").val("");
+            }
+        }
+    }
+    function PrenotaVisita()
+    {
+        let idPreno=$("#select_OrarioServizioFarmacia").val();
+        if(idPreno!=-1)
+        {
+            let idPersona="<?php echo $Ut['CF'] ?>";
+            let Email="<?php echo $Ut['Email'] ?>";
+            EffettuaPreno(idPreno,idPersona,Email);
+        }
+        else
+        {
+            alert("Scegliere un'orario!")
+        }
     }
 </script>
 </body>

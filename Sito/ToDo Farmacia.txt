@@ -2,8 +2,7 @@
 
     Creazione Pagine
     (
-        //TODO Fare Pagina Area Utente Per 'Gestione Prenotazioni'
-        //TODO Fare Pagina Area Utente Per 'Effettuare Prenotazioni'
+        //TODO Fare 'Effettua Prenotazioni'
         //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
         //TODO Fare Pagina Area Admin Per Aggiungere Disponibilità Visite
     )

@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2d8ae55d-9793-4e0f-9e70-0855f1d14657" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/InstallazioneDb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/InstallazioneDb.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sito/Dashboard/AreaAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/Dashboard/AreaAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sito/ListaFarmacie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/ListaFarmacie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sito/ToDo Farmacia.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/ToDo Farmacia.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sito/indexInjection.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/indexInjection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sito/javascript/funzioni.js" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/javascript/funzioni.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sito/script/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/script/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sito/script/funzioni.php" beforeDir="false" afterPath="$PROJECT_DIR$/Sito/script/funzioni.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sito/script/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="17">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -39,36 +38,48 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sito/ToDo Farmacia.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sito/script/funzioni.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sito/indexInjection.php">
+        <entry file="file://$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="251" column="37" selection-start-line="251" selection-start-column="37" selection-end-line="251" selection-end-column="37" />
+            <state relative-caret-position="161">
+              <caret line="526" column="71" selection-start-line="526" selection-start-column="71" selection-end-line="526" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sito/Dashboard/AreaAdmin.php">
+        <entry file="file://$PROJECT_DIR$/Sito/javascript/funzioni.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
-              <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+            <state relative-caret-position="705">
+              <caret line="106" column="8" lean-forward="true" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sito/api/addPreno.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>../../assets</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>./assets</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -84,13 +95,18 @@
         <option value="$PROJECT_DIR$/Sito/script/LoginInjection.php" />
         <option value="$PROJECT_DIR$/Database/InserimentoServizi.sql" />
         <option value="$PROJECT_DIR$/Database/InstallazioneDb.sql" />
-        <option value="$PROJECT_DIR$/Sito/ToDo Farmacia.txt" />
-        <option value="$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php" />
         <option value="$PROJECT_DIR$/Sito/ListaFarmacie.php" />
-        <option value="$PROJECT_DIR$/Sito/Dashboard/FacebookPishing/stile.css" />
         <option value="$PROJECT_DIR$/Sito/Dashboard/AreaAdmin.php" />
         <option value="$PROJECT_DIR$/Sito/Dashboard/FacebookPishing/index.php" />
         <option value="$PROJECT_DIR$/Sito/indexInjection.php" />
+        <option value="$PROJECT_DIR$/Sito/script/funzioni.php" />
+        <option value="$PROJECT_DIR$/Sito/Dashboard/FacebookPishing/stile.css" />
+        <option value="$PROJECT_DIR$/Sito/ToDo Farmacia.txt" />
+        <option value="$PROJECT_DIR$/Sito/api/getServiziFarmacia.php" />
+        <option value="$PROJECT_DIR$/Sito/javascript/funzioni.js" />
+        <option value="$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php" />
+        <option value="$PROJECT_DIR$/Sito/api/addPreno.php" />
+        <option value="$PROJECT_DIR$/Sito/script/config.php" />
       </list>
     </option>
   </component>
@@ -140,6 +156,12 @@
               <item name="Farmacia" type="b2602c69:ProjectViewProjectNode" />
               <item name="Farmacia" type="462c0819:PsiDirectoryNode" />
               <item name="Sito" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Farmacia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Farmacia" type="462c0819:PsiDirectoryNode" />
+              <item name="Sito" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -148,6 +170,12 @@
               <item name="Sito" type="462c0819:PsiDirectoryNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="FacebookPishing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Farmacia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Farmacia" type="462c0819:PsiDirectoryNode" />
+              <item name="Sito" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Farmacia" type="b2602c69:ProjectViewProjectNode" />
@@ -213,17 +241,27 @@
       <workItem from="1559488414786" duration="972000" />
       <workItem from="1559499458525" duration="1973000" />
       <workItem from="1559505607973" duration="27000" />
+      <workItem from="1559506092807" duration="1663000" />
+      <workItem from="1559508099423" duration="118000" />
+      <workItem from="1559508313552" duration="1310000" />
+      <workItem from="1559561976133" duration="202000" />
+      <workItem from="1559578563037" duration="2316000" />
+      <workItem from="1559582579798" duration="9000" />
+      <workItem from="1559583426004" duration="4747000" />
+      <workItem from="1559631872240" duration="3225000" />
+      <workItem from="1559635215968" duration="2777000" />
+      <workItem from="1559662152686" duration="2758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23333000" />
+    <option name="totallyTimeSpent" value="42458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2867804" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31876332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,28 +330,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="193" column="50" selection-start-line="193" selection-start-column="50" selection-end-line="193" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#17410#17416#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sito/ListaFarmacie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sito/Dashboard/FacebookPishing/stile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="300" column="1" selection-start-line="300" selection-start-column="1" selection-end-line="300" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -324,6 +344,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/indexInjection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="261" column="18" lean-forward="true" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/Dashboard/AreaAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/script/funzioni.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/Dashboard/FacebookPishing/stile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="773">
+          <caret line="300" column="1" selection-start-line="300" selection-start-column="1" selection-end-line="300" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/ToDo Farmacia.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/api/getServiziFarmacia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Database/InstallazioneDb.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -331,34 +393,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/javascript/funzioni.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="106" column="8" lean-forward="true" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/Dashboard/AreaUtente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="526" column="71" selection-start-line="526" selection-start-column="71" selection-end-line="526" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sito/api/addPreno.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sito/script/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sito/Dashboard/AreaAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sito/ToDo Farmacia.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sito/script/funzioni.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sito/indexInjection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="251" column="37" selection-start-line="251" selection-start-column="37" selection-end-line="251" selection-end-column="37" />
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -68,3 +68,33 @@
         }
         return null;
     }
+    //Funzione Che Restituisce Vettore Prenotazione Persone
+    function getPrenotazioneUtbyId($idUt)
+    {
+        $Query="SELECT * FROM Prenotazioni WHERE ksPersona='{$idUt}'";
+        $Ris=doQuery($Query);
+        if($Ris)
+        {
+            $Vett=array();
+            while($row=mysqli_fetch_row($Ris))
+            {
+                array_push($Vett,$row);
+            }
+            return $Vett;
+        }
+        return null;
+    }
+    //Funzione che ritorna il nome del servizio
+    function getServiziobyId($id)
+    {
+        $Query="SELECT * FROM Servizi WHERE idServizio={$id}";
+        $Ris=doQuery($Query);
+        if($Ris)
+        {
+            while($row=mysqli_fetch_array($Ris))
+            {
+                return $row["Tipo"];
+            }
+        }
+        return "N/D";
+    }
