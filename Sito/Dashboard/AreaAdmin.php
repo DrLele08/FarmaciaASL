@@ -51,6 +51,7 @@ else
     <link href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/argon.min.css?v=1.0.0" rel="stylesheet">
     <link rel="stylesheet" href="../css/stile.css">
+    <script src="../javascript/funzioni.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
@@ -220,6 +221,167 @@ else
         </div>
     </div>
     <!-- Page content -->
+    <div class="container-fluid mt--9 Invisibile" id="DivAdminDispPreno">
+        <div class="row">
+            <div class="col-xl-10 order-xl-1">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Inserisci Disponibilità Prenotazioni</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4">Completa i campi</h6>
+                            <div class="pl-lg-4">
+                                <div align="center">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <select class="custom-select" id="select_FarmaciaAdmin" onchange="FarmaciaSelected()">
+                                                <option value="-1">Scegliere una farmacia</option>
+                                                <?php
+                                                    $VettFarma=getInfoFarmacie();
+                                                    foreach($VettFarma as $row)
+                                                    {
+                                                        $id=$row["idSede"];
+                                                        $Nome=$row["Nome"];
+                                                        echo "<option value='{$id}'>{$Nome}</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-lg-4 Invisibile" id="DivAdminData">
+                                <div align="center">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                            </div>
+                                            <input class="form-control datepicker" id="input_DataAdminDisp" placeholder="Seleziona una data" type="text" onchange="DataCambiataPreno()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-lg-4 Invisibile" id="DivAdminServizioSelect">
+                                <div align="center">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <select class="custom-select" id="select_ServizioAdmin" onchange="ServizioSelezionatoAdmin()">
+                                                <option value="-1">Seleziona un servizio</option>
+                                                <?php
+                                                    $VettServ=getVettServ();
+                                                    foreach($VettServ as $row)
+                                                    {
+                                                        $id=$row["idServizio"];
+                                                        $Nome=$row["Tipo"];
+                                                        echo "<option value='{$id}'>{$Nome}</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-lg-4 Invisibile" id="DivAdminSlider">
+                                <div align="center">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <select class="custom-select" id="select_OrarioPrenoAdm">
+                                                <option value="10:00:00">10:00</option>
+                                                <option value="10:30:00">10:30</option>
+                                                <option value="11:00:00">11:00</option>
+                                                <option value="11:30:00">11:30</option>
+                                                <option value="12:00:00">12:00</option>
+                                                <option value="12:30:00">12:30</option>
+                                                <option value="15:00:00" selected>15:00</option>
+                                                <option value="15:30:00">15:30</option>
+                                                <option value="16:00:00">16:00</option>
+                                                <option value="16:30:00">16:30</option>
+                                                <option value="17:00:00">17:00</option>
+                                                <option value="17:30:00">17:30</option>
+                                                <option value="18:00:00">18:00</option>
+                                                <option value="18:30:00">18:30</option>
+                                                <option value="19:00:00">19:00</option>
+                                                <option value="19:30:00">19:30</option>
+                                                <option value="20:00:00">20:00</option>
+                                            </select>
+                                        </div>
+                                        <br><br>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-success" onclick="AddVisita()">Aggiungi</button>
+                                            <button type="button" class="btn btn-danger" onclick="Cancella()">Annulla</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt--9 Invisibile" id="DivAdminGest">
+        <div class="row">
+            <div class="col-xl-10 order-xl-1">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Gestisci Le Tue Prenotazioni</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4">Scegli un criterio di ricerca</h6>
+                            <div class="pl-lg-4">
+                                <div align="center">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                            </div>
+                                            <input class="form-control datepicker" id="input_DataAdmin" placeholder="Seleziona una data" type="text" onchange="DataSelezionata()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4" />
+                            <!-- Address -->
+                            <h6 class="heading-small text-muted mb-4">Visite In Quel Giorno</h6>
+                            <div class="pl-lg-4">
+                                <div class="row" id="DivAdminTabella">
+                                    <div class="table-responsive">
+                                        <table class="table align-items-center table-dark">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">Farmacia</th>
+                                                <th scope="col">Data/Ora</th>
+                                                <th scope="col">Stato</th>
+                                                <th scope="col">Paziente</th>
+                                                <th scope="col">Esito</th>
+                                                <th scope="col">Altro</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="table_Admin">
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid mt--9 Invisibile" id="DivAdminProfilo">
         <div class="row">
             <div class="col-xl-10 order-xl-1">
@@ -325,9 +487,9 @@ else
 <!-- Core -->
 <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
 <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Argon JS -->
 <script src="./assets/js/argon.min.js?v=1.0.0"></script>
-<script src="./assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script>
     var DivAttivo="DivAdminDispPreno";
     function CambiaDiv(NewDiv)
@@ -335,6 +497,71 @@ else
         $("#"+DivAttivo).addClass("Invisibile");
         DivAttivo=NewDiv;
         $('#'+NewDiv).removeClass("Invisibile");
+    }
+    function DataSelezionata()
+    {
+        let Data=$("#input_DataAdmin").val();
+        let idMed="<?php echo $Ut['CF'] ?>";
+        let NewData=Data[6]+Data[7]+Data[8]+Data[9]+"-"+Data[0]+Data[1]+"-"+Data[3]+Data[4];
+        getInfoPreno(idMed,NewData);
+    }
+    function FarmaciaSelected()
+    {
+        let indexFarm=$("#select_FarmaciaAdmin").val();
+        if(indexFarm!="-1")
+        {
+            $("#DivAdminData").removeClass("Invisibile")
+        }
+        else if(!$("#DivAdminData").hasClass("Invisibile"))
+        {
+            $("#DivAdminData").addClass("Invisibile")
+        }
+    }
+    function DataCambiataPreno()
+    {
+        let DivData=$("#input_DataAdminDisp").val();
+        if(DivData!="-1")
+        {
+            $("#DivAdminServizioSelect").removeClass("Invisibile");
+        }
+        else if(!$("#DivAdminServizioSelect").hasClass("Invisibile"))
+        {
+            $("#DivAdminServizioSelect").addClass("Invisibile");
+        }
+    }
+    function ServizioSelezionatoAdmin()
+    {
+        let idServ=$("#select_ServizioAdmin").val();
+        if(idServ!="-1")
+        {
+            $("#DivAdminSlider").removeClass("Invisibile");
+        }
+        else if(!$("#DivAdminSlider").hasClass("Invisibile"))
+        {
+            $("#DivAdminSlider").addClass("Invisibile");
+        }
+    }
+    function Cancella()
+    {
+        if(confirm("Sicuro di voler annullare?"))
+        {
+            $("#DivAdminSlider").addClass("Invisibile");
+            $("#DivAdminServizioSelect").addClass("Invisibile");
+            $("#DivAdminData").addClass("Invisibile");
+            $("#select_FarmaciaAdmin").val("-1");
+            $("#input_DataAdminDisp").val("");
+            $("#select_ServizioAdmin").val("-1");
+        }
+    }
+    function AddVisita()
+    {
+        let idServ=$("#select_ServizioAdmin").val();
+        let idFarm=$("#select_FarmaciaAdmin").val();
+        let idMed="<?php echo $Ut['CF'] ?>";
+        let Data=$("#input_DataAdminDisp").val();
+        let Ora=$("#select_OrarioPrenoAdm").val();
+        let NewData=Data[6]+Data[7]+Data[8]+Data[9]+"-"+Data[0]+Data[1]+"-"+Data[3]+Data[4];
+        AddDispPreno(idServ,idFarm,idMed,NewData,Ora);
     }
 </script>
 </body>

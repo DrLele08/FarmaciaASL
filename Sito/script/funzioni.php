@@ -98,3 +98,18 @@
         }
         return "N/D";
     }
+    //Funzione che restituisce vettore di servizi
+    function getVettServ()
+    {
+        $Query="SELECT * FROM Servizi";
+        $Ris=doQuery($Query);
+        $Vett=array();
+        if($Ris)
+        {
+            while($row=mysqli_fetch_array($Ris))
+            {
+                array_push($Vett,$row);
+            }
+            return $Vett;
+        }
+    }

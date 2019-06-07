@@ -1,8 +1,0 @@
-+++ToDo Farmacia+++
-
-    Creazione Pagine
-    (
-        //TODO Fare 'Effettua Prenotazioni'
-        //TODO Fare Pagina Area Admin Per Visualizzare Le Prenotazioni
-        //TODO Fare Pagina Area Admin Per Aggiungere Disponibilità Visite
-    )
